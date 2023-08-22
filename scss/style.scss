@@ -1,0 +1,40 @@
+@import "./blocks/reset";
+@import "./blocks/fonts";
+:root {
+  --index: calc(1vw + 1vh);
+  --gutter: 30px;
+  --size-small: 26;
+  --size-big: 36;
+  --dept: 4000px;
+  --transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+}
+body {
+  background-color: black;
+  color: #fff;
+  font-size: calc(var(--index) * 0.8);
+  font-family: realway, sans-serif;
+  line-height: 1.75;
+  height: var(--dept);
+  font-weight: 300;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  perspective: 1500px;
+}
+.gallery {
+  transform-style: preserve-3d;
+  height: 100%;
+}
+.frame {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition), opacity 0.75s ease;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
