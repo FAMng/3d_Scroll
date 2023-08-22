@@ -2,6 +2,18 @@
   padding: 0px;
   margin: 0px;
   border: none;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 @font-face {
@@ -55,4 +67,15 @@ body {
   transition: var(--transition), opacity 0.75s ease;
   will-change: transform;
   transform-style: preserve-3d;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 100;
+}
+
+.frame h2 {
+  text-align: center;
+  font-size: calc(var(--index) * 3);
 }/*# sourceMappingURL=style.css.map */

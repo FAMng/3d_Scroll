@@ -14,11 +14,11 @@ window.onscroll = function () {
 
   frames.forEach(function (n, i) {
     zVal.push(i * zSpasing + zSpasing);
-    zVal[i] += delta * -5;
+    zVal[i] += delta * -5.5;
     let frame = frames[i],
       transform = `translateZ(${zVal[i]}px)`,
-      opacity = zVal[i] < Math.abs(zSpasing) / 1.2 ? 1 : 0;
-    frame.setAttribute("style", `transform:${transform}`);
+      opacity = zVal[i] < Math.abs(zSpasing) / 1.8 ? 1 : 0;
+    frame.setAttribute("style", `transform:${transform}; opacity:${opacity}`);
   });
 };
 
